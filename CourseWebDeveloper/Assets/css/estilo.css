@@ -1,0 +1,34 @@
+﻿/*Tipos de mídia
+
+    screen - monitor
+    projection - projetor
+    handheld - dispositivo móvel
+    print - impressão
+    tv - televisão
+    all - para todos os tipos de mídias
+    
+    */
+
+/*SELETORES SIMPLES*/
+* {
+    color: #006699;
+}
+
+p {
+    color: #000000;
+}
+
+.destaque {
+    color: #CC0000;
+}
+
+#introducao {
+    background-color: #FFCC33;
+}
+
+em[title=empresa] {
+    color: #336600;
+    font-size: 30px;
+}
+
+/*SELETORES COMPOSTOS*/

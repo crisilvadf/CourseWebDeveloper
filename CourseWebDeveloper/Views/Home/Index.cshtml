@@ -1,0 +1,308 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h1 align="center" style="color: rgb(255, 78, 26);">Lorem Ipsum</h1>
+<hr />
+<h3 align="center" style="color: #2F4F4F;">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+
+@*  method post = envia as informações pelo servidor
+    method get =  envia as informações via url
+
+    controles utilizados em formulários *@
+<form action="@Url.Action("Index", "Home")" method="get">
+    
+    <fieldset>
+        <legend>Informações Pessoais</legend>
+
+        <label for="nome">Nome:</label><input type="text" id="nome" value="Internauta" tabindex="1" /><br />
+
+        <label for="sexo">Sexo:</label><br />
+        <input type="radio" name="sexo" id="sexo" value="M" />Masculino<br />
+        <input type="radio" name="sexo" id="sexo" value="M" />Feminino<br />
+
+        <label for="senha">
+            Senha:
+            <input type="password" id="senha" /><br />
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Informações Profissionais</legend>
+
+        <label for="conhecimentos">Conhecimentos:</label><br />
+        <input type="checkbox" name="conhecimentos" id="conhecimentos" value="Java" />Java<br />
+        <input type="checkbox" name="conhecimentos" id="conhecimentos" value="Html" />Html<br />
+        <input type="checkbox" name="conhecimentos" id="conhecimentos" value="css" />css<br />
+        <input type="checkbox" name="conhecimentos" id="conhecimentos" value="xslt" />xslt<br />
+
+        Currículo:<br />
+        <input type="file" id="curriculo" /><br />
+
+        <input type="submit" value="Enviar" /><br />
+        <input type="reset" value="Limpar" /><br />
+        <input type="button" value="Validar Formulário" /><br />
+
+        <label for="resumo">Resumo:</label><br />
+        <textarea cols="40" rows="6" id="resumo">Escreva seu resumo aqui</textarea><br />
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Outras Informações</legend>
+
+        País:<br />
+        <select id="pais">
+            <option>Brasil</option>
+            <option>Espanha</option>
+            <option>EUA</option>
+            <option>Japão</option>
+            <option>Suíça</option>
+        </select><br />
+
+        Editores ou Navegadores:<br />
+        <select id="en">
+            <optgroup label="Editores">
+                <option>Notepad++</option>
+                <option>DreamWeaver</option>
+                <option>Eclipse</option>
+                <option>HTML-Kit</option>
+            </optgroup>
+            <optgroup label="Navegadores">
+                <option>Firefox</option>
+                <option>IE</option>
+                <option>Safari</option>
+                <option>Opera</option>
+            </optgroup>
+        </select>
+    </fieldset>
+</form>
+
+<p style="text-align: center;">
+    <img src="~/Assets/images/IMG_9596.jpg" style="width: 200px;" alt="Visão Torre de TV" />
+    <a href="http://www.congressonacional.leg.br" target="_blank" style="border: 0px;" alt="Acesso Congresso Nacional" title="Congresso Nacional"><img src="~/Assets/images/IMG_9625.jpg" style="width: 200px;" alt="Congresso Nacional" /></a>
+    <img src="~/Assets/images/IMG_9693.jpg" style="width: 200px;" alt="Visão Pontão do Lago" />
+</p>
+
+<p style="color: rgb(49, 97, 111);">
+    Ut tristique magna <b>Lorem Ipsum  (tag b)</b> vitae lorem iaculis ultricies. Sed fringilla dolor ac ornare ultricies.
+    Nullam convallis arcu quis quam volutpat, sit amet varius justo laoreet. Pellentesque dignissim tellus et nunc semper ultricies.
+    Nullam sollicitudin tristique felis in tempus. Nunc sit amet erat diam. Maecenas pellentesque est finibus ipsum semper mollis.
+</p>
+
+<blockquote>
+    Integer vel metus id justo eleifend porttitor. Quisque aliquet neque in tellus <i>(ullamcorper bibendum  (tag i))</i>.
+    Aenean tempus eu leo ac luctus. Suspendisse at sollicitudin sem. In hac habitasse platea dictumst.
+    Aenean pellentesque aliquam ante, in molestie erat viverra vitae. Donec a tellus bibendum, <tt>facilisis (tag tt)</tt> massa sit amet, fermentum nisi.
+    Nam vitae enim consequat, dignissim eros mollis, volutpat lorem. Vestibulum sagittis ac <a href="http://www.r7.com" target="_blank">Portal R7 (tag a)</a>. Fusce at lacinia quam.
+</blockquote>
+
+<pre>
+    Este
+        Documento
+            está
+                Pré
+                    Formatado
+    (tag pre)
+</pre>
+
+<p>
+    Praesent <u>sollicitudin (tag u)</u> consectetur est, quis semper enim vulputate pulvinar.
+    Sed et nisi tortor. Praesent eget nisl neque. Maecenas dignissim ipsum ut bibendum pharetra.
+    Suspendisse pretium velit eu rutrum elementum. Etiam tincidunt
+    <del>augue non (tag del)</del> lacinia convallis.
+    Mauris nec gravida mauris, quis pulvinar mi. Mauris felis lorem,
+    <a href="@Url.Action("Index", "Beneficios")">benefícios da empresa</a>,
+    volutpat pulvinar risus.
+    Etiam non tincidunt sem. Morbi ex sapien, suscipit vel ante vel, aliquet vulputate nibh.
+    Sed condimentum arcu lectus, laoreet volutpat turpis congue quis.
+</p>
+
+<p>
+    <img src="~/Assets/images/dolar.jpg" alt="Dollar" align="right" style="width: 200px;" />
+</p>
+
+<p>
+    <b>Lista Não Ordenada</b>
+    <ul>
+        <li>Abertura de Conta</li>
+        <li>Contratação de Plano</li>
+        <li>Mudança de Plano</li>
+        <li>Contratação de Seguro Auto</li>
+        <li>Aplicação Financeira</li>
+        <li>Pesquisa e Desenvolvimento</li>
+        <li>@Html.ActionLink("Intercambio Cultural", "Index", "Beneficios")</li>
+        <li><a href="@Url.Action("Index", "Beneficios")">Google</a></li>
+        <li>Treinamento Gerencial</li>
+    </ul>
+
+    <b>Lista Ordenada</b>
+    <ol>
+        <li>Abertura de Conta</li>
+        <li>Contratação de Plano</li>
+        <li>Mudança de Plano</li>
+        <li>Contratação de Seguro Auto</li>
+        <li>Aplicação Financeira</li>
+        <li>Pesquisa e Desenvolvimento</li>
+        <li>intercambio Cultural</li>
+        <li>Oportunidades</li>
+        <li>Treinamento Gerencial</li>
+    </ol>
+
+    <b>Lista de Definição</b>
+    <dl>
+        <dt>Tecnologia</dt>
+        <dd>Ferramentas e as máquinas que ajudam a resolver problemas</dd>
+        <dd>Estudo dos instrumentos, processos e métodos empregados</dd>
+        <dt>Internet</dt>
+        <dd>Rede telamática internacional que une computadores</dd>
+        <dt>Software</dt>
+        <dd>Conjunto de instruções armazenadas em disco(s) ou chips</dd>
+    </dl>
+
+    <b>Lista Mista</b>
+    <ol>
+        <li>
+            Spider
+            <ul>
+                <li>Ferari 360 Spider</li>
+                <li>BMW Z4</li>
+            </ul>
+        </li>
+        <li>
+            Berlinetta
+            <ul>
+                <li>Ferrari Dino</li>
+                <li>Lamborguini Miura</li>
+            </ul>
+        </li>
+        <li>
+            Cabriolet
+            <ul>
+                <li>Peugeot 307</li>
+                <li>BMW Serie</li>
+                <li>Renault Megane</li>
+            </ul>
+        </li>
+    </ol>
+</p>
+
+<p>
+    <div>Texto</div>
+
+    Cras id porta dolor, quis fringilla tellus. Nulla blandit congue mi et sollicitudin.
+    Integer tempor massa eget nibh pellentesque, nec sollicitudin diam placerat.
+    Vestibulum ante ipsum primis in <em title="empresa">Empresa</em> faucibus orci luctus et ultrices posuere cubilia Curae; <em>Aenean euismod sem a lorem convallis, id tempus mauris tempus (tag em)</em>.
+    Nullam eu pulvinar felis. <big>Curabitur (tag big)</big> venenatis arcu arcu, vel <small>vulputate (tag small)</small> mauris laoreet non.
+    Donec posuere nulla felis, sit amet viverra mauris tempor a. Aliquam ac turpis sollicitudin, sollicitudin eros in, hendrerit justo.
+    Aliquam nec lorem in ex dictum tempus. Nunc tincidunt, purus at egestas porta, felis sem aliquet justo, id iaculis arcu metus eu velit.
+    Suspendisse venenatis sagittis lobortis. Etiam elementum turpis nec consequat tempus.
+    Integer nisl eros, sagittis non eros in, placerat dignissim quam.
+</p>
+
+<p class="destaque">
+    @*<div id="introducao">Texto</div>*@
+
+    Cras id porta dolor, quis fringilla tellus. Nulla blandit congue mi et sollicitudin.
+    Integer tempor massa eget nibh pellentesque, nec sollicitudin diam placerat.
+    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; <em>Aenean euismod sem a lorem convallis, id tempus mauris tempus (tag em)</em>.
+    Nullam eu pulvinar felis. <big>Curabitur (tag big)</big> venenatis arcu arcu, vel <small>vulputate (tag small)</small> mauris laoreet non.
+    Donec posuere nulla felis, sit amet viverra mauris tempor a. Aliquam ac turpis sollicitudin, sollicitudin eros in, hendrerit justo.
+    Aliquam nec lorem in ex dictum tempus. Nunc tincidunt, purus at egestas porta, felis sem aliquet justo, id iaculis arcu metus eu velit.
+    Suspendisse venenatis sagittis lobortis. Etiam elementum turpis nec consequat tempus.
+    Integer nisl eros, sagittis non eros in, placerat dignissim quam.
+</p>
+
+<p style="text-align: center;">
+    <b>Utilizando a tag map para criar um link em uma área específica</b>
+</p>
+
+<p style="text-align: center;">
+
+    <img src="~/Assets/images/mapa-brasil.jpg" usemap="#brasil" alt="mapa-brasil" />
+    <img src="~/Assets/images/futebol.jpg" usemap="#futebol" alt="futebol" />
+
+    <map name="brasil">
+        <area shape="rect" coords="282,238,304,259" href="http://www.brasilia.df.gov.br" target="_blank" alt="Brasília" />
+        <area shape="poly" coords="145,164,143,190,163,191,155,220,161,249,180,249,188,267,234,270,262,211,265,177,195,171,180,146,178,164" href="http://www.mt.gov.br" target="_blank" alt="Mato Grosso" />
+    </map>
+
+    <map name="futebol">
+        <area shape="circle" coords="345,126,80" href="#" alt="futebol" />
+    </map>
+</p>
+
+<p>
+    Utilizando Tabelas
+    <table border="1" cellpadding="20" cellspacing="0">
+        <tr>
+            <td>Unidade</td>
+            <td>Dia</td>
+            <td style="background-color:#CCCCCC;">Treinamento</td>
+            <td>Instrutor</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Brasília</td>
+            <td>2</td>
+            <td align="left">Sorum</td>
+            <td rowspan="2">Aman</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td align="left">Java</td>
+        </tr>
+        <tr>
+            <td>São Paulo</td>
+            <td>3</td>
+            <td align="center">Lumis</td>
+            <td>Jeosadache</td>
+        </tr>
+        <tr>
+            <td>Rio de Janeiro</td>
+            <td>3</td>
+            <td align="justify">HTML</td>
+            <td>Esaú</td>
+        </tr>
+    </table>
+</p>
+
+<p>
+    <h3>Links de Envio de Mensagens e Chamadas Telefônicas</h3>
+    Envio de Email = <a href="mailto:P534722@mail.caixa?cc=P941155@mail.caixa&subject=Duvidas&body=Qual o prazo de atendimento">Email</a><br />
+    Chamada Telefonica = <a href="callto:+556139012500">Telefone</a><br />
+    Ligação Skype = <a href="skype:cristianoSilva?call">Skype Call</a><br />
+    Chat Skype = <a href="skype:cristianoSilva?chat">Skype Chat</a><br />
+    Ligação Gtalk = <a href="gtalk:call?jid=yourscreenname">GTalk Call</a><br />
+    Chat Gtalk = <a href="gtalk:chat?jid=yourscreenname">GTalk Chat</a><br />
+    Chat MSN Messenger = <a href="msnim:chat?contact=yourscreenname">Chat MSN Messenger</a><br />
+    Yahoo Messenger = <a href="ymsgr:sendim?yourscreenname">Yahoo! Messenger</a><br />
+    AOL Messenger = <a href="aim:goim?screenname=yourscreenname">AOL Messenger</a>
+</p>
+
+<address align="center">
+    Diretamente de Brasília,<br />
+    S<sup>r. (tag sup)</sup> Cristiano Silva<br />
+    www.site.com.br | cristdf@gmail.com<br />
+    2<sup>ª (tag sup)</sup> Feira | <q>Beba <sub>H</sub>2<sub>O (tag sub)</sub> durante os estudos!</q>(tag q)<br />
+</address>
+
+@*
+    O site W3C apresenta vários elementos html
+    O site W3Schools.com
+    Editores de imagem www.imagemagick.com
+
+    <u> deixa o texto sublinhado
+    <em> ênfase
+    <strong> ênfase mais forte
+    <del> indica que o trecho está sendo excluído
+    <tt> define todas as leras com a mesma largura. texto com fonte teletipo
+    <sup> marca a letra para cima
+    <sub> marca a letra para baixo
+    <q> indica uma citação de uma linha
+    <blockquote> é uma citação em bloco
+    <pre> mantém a formação da mesma forma que foi digitado no código fonte, preserva toda a forma
+    <big> coloca o texto um pouco maior que o resto do texto
+    <small> coloca o texto um pouco menos que o resto do texto
+
+
+*@
